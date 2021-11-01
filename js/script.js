@@ -1,13 +1,17 @@
 function toggleProfileFields() {
+    // enables/disables fields on the account detail updating page
+
     const inputs = document.querySelectorAll('form input');
     const btn = document.querySelector('form button');
 
+    // toggle all fields' enabled/disabled state
     for (let input of inputs) {
         input.disabled = !input.disabled;
     }
 
     if (inputs[0].disabled) {
-        // user just saved their profile, update database
+        // all fields were just toggled to the disabled state
+        // which means user just saved their profile, so we can update database
         let url = 'php/update_profile.php';
 
         let data = new FormData();
@@ -15,8 +19,6 @@ function toggleProfileFields() {
         data.append('nric', document.getElementById('nric').value);
         data.append('phone', document.getElementById('phone').value);
         data.append('email', document.getElementById('email').value);
-
-        // console.log(data);
 
         // make post request and check response to see if we are successful
         fetch(url, {
@@ -43,22 +45,23 @@ function validateProfileFields(){
 }
 
 function validateNewAccount(){
+    // we also check that passwords are the same in php / server side
+    // but doing it on the client side lets us notify the user without having to make a http request
+
     const pw1 = document.getElementById('password');
     const pw2 = document.getElementById('password2');
 
     if (pw1.value !== pw2.value) {
-        // pw2.setCustomValidity('Passwords do not match');
-        // pw2.reportValidity();
         alert('Passwords do not match')
         return false;
     } else {
-        // pw2.setCustomValidity('');
-        // pw2.reportValidity();
         return true;
     }
 }
 
 function setAppointmentTimes() {
+    // updates the timeslot options when the user browses the different days for booking
+
     const appt_dates = document.getElementById('appt-dates');
     const appt_times = document.getElementById('appt-times');
 
@@ -82,6 +85,7 @@ function setAppointmentTimes() {
 
 function deleteAppointment(row_num) {
     // delete appointment identified by its timeslot
+
     const appt_times = document.getElementsByClassName('appt-time');
     const time = appt_times[row_num].textContent;
 

@@ -30,7 +30,6 @@
                     <br><br>
 
                     <label for="date">Choose a Date</label>
-                    <!-- <input type="date" name="date" id=""> -->
                     <select name="date" id="appt-dates" onchange="setAppointmentTimes()">
                         <?php
                             $dates = new DatePeriod(
@@ -45,9 +44,7 @@
                             }
                         ?>
                     </select>
-                    <!-- <br><br> -->
 
-                    <!-- <label for="time">Choose a Time</label> -->
                     <select name="time" id="appt-times">
                         <option value="10:00:00">10:00</option>
                         <option value="11:00:00">11:00</option>
@@ -68,6 +65,7 @@
     
     <script src="js/script.js"></script>
     <script>
+        // passing variable from php to javascript
         let data = <?php 
             // todo
             // make database query for future appointments of doctors

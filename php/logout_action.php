@@ -1,13 +1,9 @@
 <?php
     include 'redirect.php';
+    session_start();
 
-    // create full url with absolute path
-    // fixes broken redirects in xampp due to subfolder paths
-    $host_url = 'http://' . $_SERVER['HTTP_HOST']; 
-    $subdir = dirname($_SERVER['PHP_SELF']);
-    if ($subdir == '\\') {
-        $subdir = '';
-    }
+    session_unset(); 
+    session_destroy();
 
     // redirect user
     redirectTo('/index.php');

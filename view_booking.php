@@ -26,9 +26,6 @@
 
         // ignore dumb array to string conversion warnings
         @$past_appts = array_diff_assoc($res, $future_appts);
-
-        // var_dump($future_appts);
-        // var_dump($past_appts);
     ?>
     <div id="content">
         <div class="appt-table-container">
@@ -43,6 +40,8 @@
                 </thead>
                 <tbody>
                     <?php
+                    // populate future appt table with rows
+                    // i variable is for js to identify which button was clicked
                     $i = 0;
                     foreach($future_appts as $appt){
                         echo "
@@ -69,6 +68,7 @@
                 </thead>
                 <tbody>
                     <?php
+                    // populate past appt table with rows
                     foreach($past_appts as $appt)
                     echo "
                         <tr>

@@ -2,6 +2,7 @@
     include 'redirect.php';
     include 'db/dbconnect.php';
 
+    // check that all post request variables are valid
     if (isset($_POST['submit'])) {
         if (empty($_POST['name']) || empty($_POST['email']) || 
             empty($_POST['password']) || empty($_POST['password2']) ) {
@@ -14,26 +15,21 @@
     $password = $_POST['password'];
     $password2 = $_POST['password2'];
 
+    // check that both password fields are the same
     if ($password != $password2) {
         echo "Sorry passwords do not match";
         exit;
     }
 
-    // encrypt password using insecure hash :)
+    // if we reached this point, the user has given valid details for account setup
+
+    // basic password encryption
     $password = md5($password);
 
     $sql = "INSERT INTO users (name, email, password) 
             VALUES ('$name', '$email', '$password')";
     $result = $dbcnx->query($sql);
 
-    // create full url with absolute path
-    // fixes broken redirects in xampp due to subfolder paths
-    $host_url = 'http://' . $_SERVER['HTTP_HOST']; 
-    $subdir = dirname($_SERVER['PHP_SELF'], 2);
-    if ($subdir == '\\') {
-        $subdir = '';
-    }
-    
     // redirect user
     redirectTo('/booking.php');
 ?>

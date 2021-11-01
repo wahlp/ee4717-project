@@ -5,16 +5,15 @@
     $params = array('name', 'nric', 'phone', 'email');
     $updated_fields = array();
 
+    // iterate over profile details
     foreach ($params as $param) {
+        // whichever that are requested to change
         if (isset($_POST[$param])) {
-            // echo "received $param = $_POST[$param]". PHP_EOL;
             if ($_POST[$param] != '') {
+                // format them for sql query
                 array_push($updated_fields, "$param = '$_POST[$param]'");
             }
         }
-        // else {
-        //     // echo "did not receive $param = $_POST[$param]" . PHP_EOL;
-        // }
     }
 
     // update database 
@@ -29,6 +28,4 @@
     foreach($params as $param) {
         $_SESSION[$param] = $_POST[$param];
     }
-    
-    // echo PHP_EOL . $_SESSION['nric'];
 ?>

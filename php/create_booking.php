@@ -3,14 +3,6 @@
     include 'db/dbconnect.php';
     session_start();
 
-    // create full url with absolute path
-    // fixes broken redirects in xampp due to subfolder paths
-    $host_url = 'http://' . $_SERVER['HTTP_HOST']; 
-    $subdir = dirname($_SERVER['PHP_SELF'], 2);
-    if ($subdir == '\\') {
-        $subdir = '';
-    }
-
     if (!isset($_SESSION['email'])) {
         // user is not logged in
         // they do not have permission to create booking

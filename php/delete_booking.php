@@ -1,6 +1,4 @@
 <?php
-    // var_dump($_POST);
-    
     include 'db/dbconnect.php';
     session_start();
 
@@ -14,8 +12,6 @@
         where users.email = '$user_email'
         and a.appointment_time = '$appt_time'";
 
-    // echo $query;
     $result = $dbcnx->query($query);
-
     echo $result;
 ?>

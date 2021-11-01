@@ -16,14 +16,15 @@
             <li id="login-btn">
                 <?php
                     session_start();
+                    
+                    // if user is logged in, show extra features
                     if (isset($_SESSION['user_name'])) {
-                        // echo '<a href="logout.php">Logout</a>';
                         echo '
                         <div class="dropdown">
                             <a href="profile.php" class="dropbtn">Profile</a>
                             <div class="dropdown-content">
                                 <a href="view_booking.php">My Booking</a>
-                                <a href="logout.php">Logout</a>
+                                <a href="php/logout_action.php">Logout</a>
                             </div>
                         </div>
                         ';
