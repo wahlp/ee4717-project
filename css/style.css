@@ -1,0 +1,360 @@
+/* 
+    global css values
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* margin: 0; */
+    /* padding: 0;   */
+    padding: 0 50px;
+}
+
+/* button {
+    background: #17beee;
+} */
+
+/* 
+    header, logo, navbar, login button 
+*/
+
+header {
+    display: flex;
+    width: 100%;
+    /* background: rgba(114, 114, 250, 0.68); */
+    /* background: #ee4717; */
+    align-items: center;
+    margin: 15px 0 25px;
+}
+
+header > * {
+    position: relative;
+    float: left;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    display: block;
+    width: 100%;
+    top: 20%;
+}
+
+header li {
+    float: left;
+    margin-left: 25px;
+}
+
+header #login-btn {
+    float: right;
+    /* padding: 0 40px; */
+}
+
+header a {
+    color: black;
+    font-size: 24px;
+    display: block;
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #ccc;
+}
+
+#nav {
+    width: 100%;
+    height: 100%;
+}
+
+/* #logo {
+    transform: scale(0.5);
+} */
+
+/* @keyframes spinShape {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+/* #logo svg > *:hover {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: spinShape 2s;
+} */
+/* #logo svg > *:hover {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 3s linear forwards;
+} */
+
+/* @keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+    99.9% { stroke-dashoffset: 0; stroke-dasharray: 1000; }
+    100% { stroke-dashoffset: 1000; stroke-dasharray: none; }
+} */
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    background: white;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    /* border: 1px solid black;
+    border-top: 0; */
+    border-top: 1px solid black;
+}
+
+/* .dropdown-content a:last-child {
+    border-bottom: 1px solid black;
+} */
+
+.dropdown-content a {
+    width: 140px;
+}
+
+.dropdown > a {
+    box-sizing: border-box;
+    width: 170px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    /* border: 1px solid black; */
+    /* border-bottom: 0;  */
+}
+/* 
+    border on the Profile button creates a bug that moves the whole navbar up one pixel 
+    disabled until we fix that or change design
+*/
+
+
+/*
+    page content
+*/
+
+#content {
+    /* background: #555; */
+    display: flex;
+}
+
+.content-block {
+    float: left;
+    min-height: 400px;
+    background: #eee;
+}
+
+.block-half {
+    width: calc(50% - 5px);
+}
+
+.content-block:nth-child(2) {
+    margin-left: 10px;
+}
+
+.content-block > * {
+    padding: 30px;
+}
+
+.bio {
+    width: calc(65% - 5px);
+}
+
+.content-sidebar {
+    width: calc(35% - 5px);
+}
+
+.about-pics {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.about-pics:last-child {
+    margin-bottom: 0;
+}
+
+.gmaps {
+    width: 90%;
+    padding: 0 5%;
+    height: 400px;
+}
+
+/* 
+    footer
+*/
+
+footer {
+    text-align: center;
+    /* background: #333; */
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 18px;
+    /* color: #ccc; */
+}
+
+/* 
+    login page form, inputs
+*/
+
+#form-wrapper {
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px 0px #aaa;
+}
+
+form {
+    background: #eee;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.form-large {
+    min-width: 400px;
+    padding: 10px 40px 20px;
+}
+
+form label {
+    float: left;
+    width: 140px;
+}
+
+
+.form-login button {
+    float: right;
+}
+
+.form-booking button {
+    margin: 0 auto;
+    display: block;
+}
+
+form a {
+    float: right;
+    margin-right: 30px;
+    line-height: 30px;
+}
+
+/* .form-footer {
+    display: inline-block;
+    float: right;
+} */
+
+input, select {
+    font-size: 16px;
+}
+
+.form-section-register label, .form-section-booking label {
+    width: 140px;
+}
+
+form button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 2px 2px #888;
+}
+
+form button:hover {
+    filter: brightness(85%);
+}
+
+/* 
+    doctors table
+*/
+
+.table-wrapper {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.doctor-table {
+    border-collapse: separate; 
+    border-spacing: 3em 5em;
+}
+
+.doc-name {
+    font-size: 20px;
+}
+
+.doctor-table td:nth-child(1) {
+    width: 20%;
+}
+
+.doctor-table td:nth-child(2) {
+    width: 80%;
+}
+
+.doctor-table a {
+    background: #eee;
+    padding: 10px;
+    text-decoration: none;
+    box-shadow: 2px 2px 2px 0px #aaa;
+    border-radius: 5px;
+}
+
+.doctor-table a:hover {
+    filter: brightness(85%);
+}
+
+.doctor-table a:visited {
+    color: inherit;
+}
+
+/* user viewing their existing bookings */
+
+.appt-table-container {
+    /* background: #aaa; */
+    margin: 0 auto;
+}
+
+.appt-table {
+    width: 600px;
+    border-collapse: collapse;
+}
+
+.appt-table th {
+    background: #eee;
+}
+
+.appt-table td, .appt-table th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.appt-upcoming tr > *:nth-child(1) { width: 30%; }
+.appt-upcoming tr > *:nth-child(2) { width: 30%; }
+.appt-upcoming tr > *:nth-child(3) { width: 20%; }
+.appt-upcoming tr > *:nth-child(4) { width: 20%; }
+
+.appt-previous tr > *:nth-child(1) { width: 30%; }
+.appt-previous tr > *:nth-child(2) { width: 30%; }
+.appt-previous tr > *:nth-child(3) { width: 40%; }
