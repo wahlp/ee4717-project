@@ -2,6 +2,21 @@
     include 'db/dbconnect.php';
     session_start();
 
+    // create full url with absolute path
+    // fixes broken redirects in xampp due to subfolder paths
+    $host_url = 'http://' . $_SERVER['HTTP_HOST']; 
+    $subdir = dirname($_SERVER['PHP_SELF'], 2);
+    if ($subdir == '\\') {
+        $subdir = '';
+    }
+
+    if (!isset($_SESSION_['email'])) {
+        // user is not logged in
+        // they do not have permission to create booking
+        header('Location: ' . $host_url . $subdir . '/login.php');
+        exit;
+    }
+
     $user_email = $_SESSION['email'];
     $doctor_name = $_POST['doctor'];
     $appt_date = $_POST['date'];
@@ -20,14 +35,6 @@
         and d.name = '$doctor_name'";
 
     $result = $dbcnx->query($query);
-
-    // create full url with absolute path
-    // fixes broken redirects in xampp due to subfolder paths
-    $host_url = 'http://' . $_SERVER['HTTP_HOST']; 
-    $subdir = dirname($_SERVER['PHP_SELF'], 2);
-    if ($subdir == '\\') {
-        $subdir = '';
-    }
 
     if ($result) {
         // appointment successfully created
