@@ -36,8 +36,10 @@
                     <li>Medical Consultaion</li>
                     <li>Etc.</li>
                 </ul>
-                <p> LET'S FIGHT COVID-19 TOGETHER! </P>
-                <p> Contact us for any futher enquiry </p>
+                <br>
+                <p><i>LET'S FIGHT COVID-19 TOGETHER!</i></p>
+                <br>
+                <p><a href="contact.php">Contact us</a> for any futher enquiry</p>
             </div>
         </div>
     </div>
