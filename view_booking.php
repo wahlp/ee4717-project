@@ -49,8 +49,8 @@
                         <tr class='future-appt'>
                             <td>" . $appt['appt_time'] . "</td>
                             <td>" . $appt['doc_name'] . "</td>
-                            <td><button>Change</button></td>
-                            <td><button>Cancel</button></td>
+                            <td class='table-btn'><button>Change</button></td>
+                            <td class='table-btn'><button>Cancel</button></td>
                         </tr>
                         ";
                     ?>
