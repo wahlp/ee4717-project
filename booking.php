@@ -30,7 +30,7 @@
                     <br><br>
 
                     <label for="date">Choose a Date</label>
-                    <select name="date" id="appt-dates" onchange="setAppointmentTimes()">
+                    <select name="date" id="appt-dates" onchange="setAppointmentTimes(data)">
                         <?php
                             $dates = new DatePeriod(
                                 new DateTime('tomorrow'), // Start date of the period
@@ -66,22 +66,19 @@
     <script src="js/script.js"></script>
     <script>
         // passing variable from php to javascript
-        let data = <?php 
-            // todo
-            // make database query for future appointments of doctors
-            // each doctor's existing future appointment prevents that timeslot from being chosen
+        const data = <?php include 'php/get_unavailable_timeslots.php' ?>;
 
-            // simulating queried dates, replace with actual queried results when done
-            // current day and day after will have some timeslots blocked
-            $tdy = new DateTime('today');
-            $tdy->add(new DateInterval('P2D'));
-            $tmr = new DateTime('tomorrow');
-            $banned_dates = array(
-                $tdy->format('Y-m-d') => ['15:00', '16:00'],
-                $tmr->format('Y-m-d') => ['15:00', '16:00', '17:00']
-            );
-            echo json_encode($banned_dates, JSON_HEX_TAG); 
-        ?>;
+        // for debugging
+        // prints unavailable timeslots to console for easy reference to compare to actual removed timeslots
+        for (const doctor in data) {
+            console.log(`${doctor} is unavailable on these days`)
+            for (const date in data[doctor]) {
+                console.log(`${date} - ${JSON.stringify(data[doctor][date])}`)
+            }
+        }
+
+        // in case the default option for timeslot is actually not available, we would need to remove it
+        // so we need to run on page load
         setAppointmentTimes(data);
     </script>
 </body>

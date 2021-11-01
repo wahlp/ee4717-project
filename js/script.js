@@ -62,17 +62,18 @@ function validateNewAccount(){
 function setAppointmentTimes(data) {
     // updates the timeslot options when the user browses the different days for booking
 
-    const appt_dates = document.getElementById('appt-dates');
+    const doc_name = document.getElementById('appt-doctor').value;
+    const selected_date = document.getElementById('appt-dates').value;
     const appt_times = document.getElementById('appt-times');
 
     const default_timeslots = ['10:00', '11:00', '13:00', '14:00', '15:00', '16:00', '17:00'];
-    const selected_date = appt_dates.value;
 
     // each valid appt date has a known set of default timeslots
     // booking.php should include occupied timeslots generated in a script tag
     // we stored it in a var called data
     // there's probably a better way to do this
-    const invalid_dates = (data[selected_date] === undefined) ? [] : data[selected_date]; 
+    const doc_schedule = data[doc_name];
+    const invalid_dates = (doc_schedule[selected_date] === undefined) ? [] : doc_schedule[selected_date]; 
 
     const valid_timeslots = default_timeslots.filter(x => !invalid_dates.includes(x));
     appt_times.innerHTML = ''; // clear all timeslots
