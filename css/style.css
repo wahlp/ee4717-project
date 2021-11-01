@@ -295,10 +295,15 @@ form button:hover {
     margin: 0 auto;
 }
 
+.appt-table-container > h1:first-child {
+    margin-top: 0;
+}
+
 .appt-table {
     width: 600px;
     border-collapse: collapse;
 }
+
 
 .appt-table th {
     background: #eee;
