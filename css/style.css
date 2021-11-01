@@ -182,6 +182,7 @@ header a:hover {
 
 .bio {
     width: calc(65% - 5px);
+    text-align: justify;
 }
 
 .content-sidebar {
@@ -303,6 +304,10 @@ form button:hover {
 
 .doc-name {
     font-size: 20px;
+}
+
+.doc-desc {
+    text-align: justify;
 }
 
 .doctor-table td:nth-child(1) {
