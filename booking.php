@@ -77,8 +77,8 @@
             $tdy->add(new DateInterval('P2D'));
             $tmr = new DateTime('tomorrow');
             $banned_dates = array(
-                $tdy->format('d-m') => ['15:00', '16:00'],
-                $tmr->format('d-m') => ['15:00', '16:00', '17:00']
+                $tdy->format('Y-m-d') => ['15:00', '16:00'],
+                $tmr->format('Y-m-d') => ['15:00', '16:00', '17:00']
             );
             echo json_encode($banned_dates, JSON_HEX_TAG); 
         ?>;
