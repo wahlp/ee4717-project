@@ -10,7 +10,7 @@
         $subdir = '';
     }
 
-    if (!isset($_SESSION_['email'])) {
+    if (!isset($_SESSION['email'])) {
         // user is not logged in
         // they do not have permission to create booking
         header('Location: ' . $host_url . $subdir . '/login.php');
