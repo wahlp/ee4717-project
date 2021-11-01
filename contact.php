@@ -23,8 +23,8 @@
                     <p>8:00am - 12:00pm</p>
                 </div>
                 <h1>Contact us here</h1>
-                <p>Clinic number: +65 6789 1234</p>
-                <p>Email: tanfamily@tanclinic.com</p>
+                <p>Clinic number: <a href="tel:+6567891234">+65 6789 1234</a></p>
+                <p>Email: <a href="mailto:tanfamily@tanclinic.com">tanfamily@tanclinic.com</a></p>
             </div>
         </div>
         <div class="content-block block-half">

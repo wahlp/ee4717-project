@@ -21,13 +21,24 @@
                     many of our residing neighbours have come to us for appointments for them or for their children.
                     We treat everyone who comes in like a family and treat them with utmost care.
                 </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae rerum cupiditate quae exercitationem modi, nisi ullam molestiae debitis ipsum placeat sunt, itaque impedit sint eveniet ratione ex, quisquam deserunt a.</p>
+                <p>
+                    Our customers are the testimony of our clinic, we build lasting relationships with them all these years.
+                    This brings us joy, satisfaction and encouragement into coming to work everyday.
+                </p>
+                <p>We would keep a happy team spirit in order to serve you better!
+                    Everyone would be treated as equal as possible and would have the right to confidentiality.
+                    Any information regarding your condition would be provided, always follow your doctor's recommendation, feel free to seek a second opinion. 
+                </p>
+                <p>
+                    You are resonsible for your own health and the health of your family.
+                    Our professional help and medication are not miracle workers.
+                </p>
             </div>
         </div>
         <div class="content-block content-sidebar">
             <div>
-                <img src="img/200x100.png" alt="" class="about-pics">
-                <img src="img/200x100.png" alt="" class="about-pics">
+                <img src="img/aboutus.jpg" alt="" class="about-pics">
+                <img src="img/inkedclinic.jpg" alt="" class="about-pics">
             </div>
         </div>
     </div>

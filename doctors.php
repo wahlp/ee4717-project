@@ -17,45 +17,51 @@
                 <tbody>
                     <tr>
                         <td>
-                            <img src="img/obama.jpg" alt="" width=300 height=400>
+                            <img src="img/JianTan.png" alt="" width=250 height=350>
                         </td>
                         <td>
-                            <div class="doc-name">Barack Obama</div>
+                            <div class="doc-name">Dr Jian Tan</div>
                             <br>
                             <div class="doc-desc">
-                                <p>The inauguration of Barack Obama as the 44th president took place on January 20, 2009. In his first few days in office, Obama issued executive orders and presidential memoranda directing the U.S. military to develop plans to withdraw troops from Iraq. He ordered the closing of the Guantanamo Bay detention camp, but Congress prevented the closure by refusing to appropriate the required funds and preventing moving any Guantanamo detainee into the U.S. or to other countries. Obama reduced the secrecy given to presidential records. He also revoked President George W. Bush's restoration of President Ronald Reagan's Mexico City policy which prohibited federal aid to international family planning organizations that perform or provide counseling about abortion.</p>
+                                <p>Dr Jian Tan graduated from the National University of Singapore (NUS) in 2007. 
+                                    He is an accredited Family Physician and holds Graduate Diplomas in Family Medicine and Occupational Medicine. 
+                                    He is also a Designated Workplace Doctor.</p>
+
+                                   <p> Dr Jian’s passion lies in Family Medicine and believes in a holistic approach to patient care by treating each patient as a whole rather than focusing on a single organ.</p>
                             </div>
                             <br>
-                            <a href='/booking.php?doctor=Barack Obama'>Book this doctor</a>
+                            <a href='booking.php?doctor=Jian Tan'>Book this doctor</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <img src="img/trump.jpg" alt="" width=300 height=400>
+                            <img src="img/CarrieTan.png" alt="" width=250 height=350>
                         </td>
                         <td>
-                            <div class="doc-name">Donald Trump</div>
+                            <div class="doc-name">Dr Carrie Tan</div>
                             <br>
                             <div class="doc-desc">
-                                <p>Trump was inaugurated as the 45th president of the United States on January 20, 2017. During his first week in office, he signed six executive orders: interim procedures in anticipation of repealing the Affordable Care Act ("Obamacare"), withdrawal from the Trans-Pacific Partnership negotiations, reinstatement of the Mexico City policy, authorizing the Keystone XL and Dakota Access Pipeline construction projects, reinforcing border security, and beginning the planning and design process to construct a wall along the U.S. border with Mexico.</p>
+                                <p>Dr Carrie Tan graduated with Honors from NUS and subsequently completed her MD degree with the prestigious Duke-NUS Graduate Medical School in 2011.</p>
+                                    <p>She has a special interest in chronic disease management and preventive medicine. She believes strongly in patient education, loves motivating and empowering patients to take proactive steps in maintaining good health.
+                                </p>
                             </div>
                             <br>
-                            <a href='/booking.php?doctor=Donald Trump'>Book this doctor</a>
+                            <a href='booking.php?doctor=Carrie Tan'>Book this doctor</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <img src="img/biden.jpg" alt="" width=300 height=400>
+                            <img src="img/JustinTan.png" alt="" width=250 height=350>
                         </td>
                         <td>
-                            <div class="doc-name">Joe Biden</div>
+                            <div class="doc-name">Dr Justin Tan</div>
                             <br>
                             <div class="doc-desc">
-                                <p>Biden was inaugurated as the 46th president of the United States on January 20, 2021. At 78, he is the oldest person to have assumed the office. He is the second Catholic president (after John F. Kennedy) and the first president whose home state is Delaware. He is the second non-incumbent vice president (after Richard Nixon in 1968) to be elected president. He is also the first president from the Silent Generation.</p>
-                                <p>Biden's inauguration was "a muted affair unlike any previous inauguration" due to COVID-19 precautions as well as massively increased security measures because of a threat of widespread civil unrest. Biden took the oath of office on the Capitol's west steps and gave an inaugural address, but there were no spectators on the Mall and no in-person parades or inaugural balls. Trump did not attend, becoming the first outgoing president since 1869 to not attend his successor's inauguration.</p>
+                                <p>Dr Justin Tan graduated with a Bachelor of Medicine and a Bachelor of Surgery (MBBS) from the National University of Singapore (NUS) in 2013.</p>
+                                <p>He rotated through clinical postings in Internal Medicine, Obstetrics & Gynaecology and Orthopaedic Surgery during his houseman year at SGH, obtaining the Best House Officer award upon completion of his housemanship. Subsequently, he spent more than 3 years in the ENT departments of CGH, SGH and KKH, actively involved in managing a wide variety of ear, nose, throat and neck conditions both conservatively and surgically before joining Tan Family Clinic</p>
                             </div>
                             <br>
-                            <a href='/booking.php?doctor=Joe Biden'>Book this doctor</a>
+                            <a href='booking.php?doctor=Justin Tan'>Book this doctor</a>
                         </td>
                     </tr>
                 </tbody>

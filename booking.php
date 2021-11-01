@@ -21,7 +21,7 @@
                     <select name="doctor" id="appt-doctor" onchange="setAppointmentTimes()">
                         <?php
                             // read query string to select default doctor name
-                            $options = ['Barack Obama', 'Donald Trump', 'Joe Biden'];
+                            $options = ['Jian Tan', 'Carrie Tan', 'Justin Tan'];
                             foreach ($options as $option) {
                                 echo "<option value='$option'" . ($option == $_GET['doctor'] ? ' selected' : '') . ">$option</option>";
                             }
