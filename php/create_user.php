@@ -1,4 +1,5 @@
 <?php
+    include 'redirect.php';
     include 'db/dbconnect.php';
 
     if (isset($_POST['submit'])) {
@@ -34,7 +35,5 @@
     }
     
     // redirect user
-    header('Location: ' . $host_url . $subdir . '/booking.php');
-    exit;
-    
+    redirectTo('/booking.php');
 ?>

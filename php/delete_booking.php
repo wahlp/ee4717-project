@@ -18,15 +18,4 @@
     $result = $dbcnx->query($query);
 
     echo $result;
-    // // create full url with absolute path
-    // // fixes broken redirects in xampp due to subfolder paths
-    // $host_url = 'http://' . $_SERVER['HTTP_HOST']; 
-    // $subdir = dirname($_SERVER['PHP_SELF'], 2);
-    // if ($subdir == '\\') {
-    //     $subdir = '';
-    // }
-
-    // // refresh page
-    // header('Location: ' . $host_url . $subdir . '/view_booking.php');
-    // exit;
 ?>

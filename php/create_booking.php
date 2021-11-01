@@ -1,4 +1,5 @@
 <?php
+    include 'redirect.php'; 
     include 'db/dbconnect.php';
     session_start();
 
@@ -13,8 +14,7 @@
     if (!isset($_SESSION['email'])) {
         // user is not logged in
         // they do not have permission to create booking
-        header('Location: ' . $host_url . $subdir . '/login.php');
-        exit;
+        redirectTo('/login.php');
     }
 
     $user_email = $_SESSION['email'];
@@ -39,9 +39,8 @@
     if ($result) {
         // appointment successfully created
         // redirect user to view booking
-        header('Location: ' . $host_url . $subdir . '/view_booking.php');
+        redirectTo('/view_booking.php');
     } else {
-        header('Location: ' . $host_url . $subdir . '/booking.php');
+        redirectTo('/booking.php');
     }
-    exit;
 ?>

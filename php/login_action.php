@@ -1,4 +1,5 @@
-<?php //authmain.php
+<?php
+    include "redirect.php";
     include "db/dbconnect.php";
     session_start();
     
@@ -16,13 +17,7 @@
         $result = $dbcnx->query($query);
         $row = $result->fetch_object();
 
-        // create full url with absolute path
-        // fixes broken redirects in xampp due to subfolder paths
-        $host_url = 'http://' . $_SERVER['HTTP_HOST']; 
-        $subdir = dirname($_SERVER['PHP_SELF'], 2);
-        if ($subdir == '\\') {
-            $subdir = '';
-        }
+        $dbcnx->close();
 
         if ($result->num_rows >0 )
         {
@@ -39,12 +34,10 @@
             // if login successful -> redirect, else reset form / notify user
             
             // redirect user
-            header('Location: ' . $host_url . $subdir . '/booking.php');
-            exit;
+            redirectTo('/booking.php');
         } else {
-            header('Location: ' . $host_url . $subdir . '/login.php');
+            redirectTo('/login.php');
         }
-        $dbcnx->close();
 }
 ?>
     
