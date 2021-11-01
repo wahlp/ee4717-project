@@ -14,27 +14,6 @@
     <div id="content">
         <div id="form-wrapper">
             <form action="php/create_booking.php" method="post" class="form-large form-booking">
-                <h1>Register</h1>
-
-                <div class="form-section-register">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="">
-                    <br><br>
-
-                    <label for="nric">NRIC/FIN</label>
-                    <input type="text" name="nric" pattern="^[STFG]\d{7}[A-Z]$" id="">
-                    <br><br>
-
-                    <label for="phone">Phone Number</label>
-                    <input type="text" name="phone" pattern="\d{8}" id="">
-                    <br><br>
-
-                    <label for="email">Email</label>
-                    <input type="email" name="email" pattern="^([\w\.-])+@([\w]+\.){1,3}([A-z]){2,3}$">
-                    <br><br>
-                </div>
-
-
                 <h1>Appointment Details</h1>
 
                 <div class="form-section-booking">
@@ -60,9 +39,9 @@
                                 7 // Apply the interval 7 times on top of the starting date
                             );
                             foreach ($dates as $date) {
-                                $long_date = $date->format('d M (l)');
-                                $short_date = $date->format('d-m');
-                                echo "<option value=\"$short_date\">$long_date</option>";
+                                $display_date = $date->format('d M (l)');
+                                $proper_date = $date->format('Y-m-d');
+                                echo "<option value=\"$proper_date\">$display_date</option>";
                             }
                         ?>
                     </select>
@@ -70,13 +49,13 @@
 
                     <!-- <label for="time">Choose a Time</label> -->
                     <select name="time" id="appt-times">
-                        <option value="">10:00</option>
-                        <option value="">11:00</option>
-                        <option value="">13:00</option>
-                        <option value="">14:00</option>
-                        <option value="">15:00</option>
-                        <option value="">16:00</option>
-                        <option value="">17:00</option>
+                        <option value="10:00:00">10:00</option>
+                        <option value="11:00:00">11:00</option>
+                        <option value="13:00:00">13:00</option>
+                        <option value="14:00:00">14:00</option>
+                        <option value="15:00:00">15:00</option>
+                        <option value="16:00:00">16:00</option>
+                        <option value="17:00:00">17:00</option>
                     </select>
                     <br><br>
                 </div>

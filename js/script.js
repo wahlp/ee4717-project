@@ -76,6 +76,6 @@ function setAppointmentTimes() {
 
     for (timeslot of valid_timeslots) {
         // set the available timeslots
-        appt_times.add(new Option(timeslot));
+        appt_times.add(new Option(timeslot, timeslot + ':00'));
     }
 }
