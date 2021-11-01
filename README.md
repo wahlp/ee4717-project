@@ -1,18 +1,18 @@
 ## Setup
 
-If you (like me) don't want set up VirtualBox like in the lecture slides,
+If you (like me) don't want to set up VirtualBox like in the lecture slides,
 
 1. Install [XAMPP](https://www.apachefriends.org/index.html)
 2. Create a new folder in `C:\xampp\htdocs\` and name it `ee4717-project` or something
 3. Dump all these files in that folder
 4. Launch XAMPP Control Panel and click Start on Apache and MySQL. ![](docs/xampp-setup.png)
-5. Open [localhost/ee4717-project](http://localhost/ee4717-project). You should see the index page.
-6. Have fun 😊
+5. Go to phpMyAdmin, create a new database `f32ee` if it doesn't exist yet
+6. Import `doctors.sql` and `users.sql` from the `sql` folder
+7. Open [localhost/ee4717-project](http://localhost/ee4717-project). You should see the index page.
+8. Have fun 😊
 
 
 ## Recommended development tools
-
-Notepad++ is a text editor with not much going for it, choose something else for actual development.
 
 * [VS Code](https://code.visualstudio.com/)
   * [Emmet](https://www.youtube.com/watch?v=ZtyMdRzvi0w) - Built-in feature to type HTML faster 
