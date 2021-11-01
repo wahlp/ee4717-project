@@ -44,15 +44,18 @@
                 </thead>
                 <tbody>
                     <?php
-                    foreach($future_appts as $appt)
-                    echo "
-                        <tr class='future-appt'>
-                            <td>" . $appt['appt_time'] . "</td>
-                            <td>" . $appt['doc_name'] . "</td>
-                            <td class='table-btn'><button>Change</button></td>
-                            <td class='table-btn'><button>Cancel</button></td>
-                        </tr>
-                        ";
+                    $i = 0;
+                    foreach($future_appts as $appt){
+                        echo "
+                            <tr class='future-appt'>
+                                <td class='appt-time'>" . $appt['appt_time'] . "</td>
+                                <td>" . $appt['doc_name'] . "</td>
+                                <td class='table-btn'><button>Change</button></td>
+                                <td class='table-btn'><button onclick='deleteAppointment($i)'>Cancel</button></td>
+                            </tr>
+                            ";
+                        $i += 1;
+                    }
                     ?>
                 </tbody>
             </table>
@@ -82,4 +85,5 @@
         </div>
     </div>
     <?php include 'php/common/footer.php' ?>
+    <script src="js/script.js"></script>
 </body>

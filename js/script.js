@@ -79,3 +79,28 @@ function setAppointmentTimes() {
         appt_times.add(new Option(timeslot, timeslot + ':00'));
     }
 }
+
+function deleteAppointment(row_num) {
+    // delete appointment identified by its timeslot
+    const appt_times = document.getElementsByClassName('appt-time');
+    const time = appt_times[row_num].textContent;
+
+    const url = 'php/delete_booking.php';
+    const data = new FormData();
+    data.append('time', time);
+
+    // make post request and check response to see if we are successful
+    fetch(url, {
+        method: 'POST',
+        body: data
+    })
+    .then(response => response.text())
+    .then(response => {
+        if (response == 1) {
+            // deletion confirmed, remove row from future appts table
+            const future_appts = document.querySelectorAll('tbody tr.future-appt');
+            future_appts[row_num].remove();
+        }
+    })
+    .catch(err => console.log(err));
+}

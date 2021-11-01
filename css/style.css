@@ -350,6 +350,10 @@ form button:hover {
     padding: 5px;
 }
 
+.appt-table .table-btn {
+    text-align: center;
+}
+
 .appt-upcoming tr > *:nth-child(1) { width: 30%; }
 .appt-upcoming tr > *:nth-child(2) { width: 30%; }
 .appt-upcoming tr > *:nth-child(3) { width: 20%; }
