@@ -82,15 +82,6 @@
             );
             echo json_encode($banned_dates, JSON_HEX_TAG); 
         ?>;
-        setAppointmentTimes();
+        setAppointmentTimes(data);
     </script>
-    <?php 
-        // var_dump($banned_dates);
-        // $banned_dates_fake = array(
-        //     '17-10' => ['15:00'],
-        //     '18-10' => ['15:00', '16:00']
-        // );
-        // var_dump($banned_dates_fake);
-        // echo $banned_dates == $banned_dates_fake;
-    ?>
 </body>

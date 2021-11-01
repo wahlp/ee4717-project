@@ -59,7 +59,7 @@ function validateNewAccount(){
     }
 }
 
-function setAppointmentTimes() {
+function setAppointmentTimes(data) {
     // updates the timeslot options when the user browses the different days for booking
 
     const appt_dates = document.getElementById('appt-dates');
