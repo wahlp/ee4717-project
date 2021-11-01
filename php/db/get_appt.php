@@ -18,6 +18,7 @@
             inner join doctors
             on doctors.id = A.doctor_id
             where users.email = '" . $email . "'
+            order by appt_time asc
         ";
         
         $result = $dbcnx->query($query);
