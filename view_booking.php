@@ -38,7 +38,6 @@
                     <tr class="future-appt">
                         <th>Appointment Time</th>
                         <th>Doctor</th>
-                        <th>Change Details</th>
                         <th>Cancel</th>
                     </tr>
                 </thead>
@@ -50,7 +49,6 @@
                             <tr class='future-appt'>
                                 <td class='appt-time'>" . $appt['appt_time'] . "</td>
                                 <td>" . $appt['doc_name'] . "</td>
-                                <td class='table-btn'><button>Change</button></td>
                                 <td class='table-btn'><button onclick='deleteAppointment($i)'>Cancel</button></td>
                             </tr>
                             ";
