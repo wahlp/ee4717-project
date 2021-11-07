@@ -1,3 +1,14 @@
+A website for the EE4717 project, to handle the booking of appointments for a clinic.
+## Features
+### Implemented
+* Login system for users
+* Creation / Deletion of bookings
+* Prevention of booking a timeslot when a doctor isn't available
+### Not implemented
+* Login system for doctors
+* Email notifications
+* Several todos left in the code
+
 ## Setup
 
 If you (like me) don't want to set up VirtualBox like in the lecture slides,
