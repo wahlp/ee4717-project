@@ -23,7 +23,13 @@
         
         $result = $dbcnx->query($query);
         
-        // format to assoc array and return
-        return $result->fetch_all(MYSQLI_ASSOC);
+        // format to array of assoc arrays and return
+        // i would just use > return $result->fetch_all(MYSQLI_ASSOC);
+        // but it doesnt work on php 5.5
+        $final_array = [];
+        while ($row = $result->fetch_assoc()){
+            $final_array[] = $row;
+        }
+        return $final_array;
     }
 ?>
