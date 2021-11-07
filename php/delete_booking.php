@@ -17,7 +17,7 @@
     // check if the query actually deleted any row
     // if not, we should not update the table in javascript
     // this value will tell the js how to decide what to do
-    echo $result->affected_rows;
+    echo mysqli_affected_rows($dbcnx);
 
     // unlikely this actually matters since we control the way appt_date appears in html
     // but it might help us avoid more bugs in future
