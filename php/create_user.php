@@ -31,5 +31,5 @@
     $result = $dbcnx->query($sql);
 
     // redirect user
-    redirectTo('/booking.php');
+    redirectTo('/login.php');
 ?>
