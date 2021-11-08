@@ -33,7 +33,6 @@
                 <br><br>
 
                 <button type="submit">Go</button>
-                <a href="new_account.php">Create account</a>
             </form>
         </div>
     </div>
