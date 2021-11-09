@@ -30,6 +30,17 @@
             VALUES ('$name', '$email', '$password')";
     $result = $dbcnx->query($sql);
 
+    if (mysqli_affected_rows($dbcnx) > 0) {
+        $to      = 'f32ee@localhost';
+        $subject = 'Tan Family Clinic - New Account';
+        $message = 'Your account has been successfully created';
+        $headers = 'From: f32ee@localhost' . "\r\n" .
+            'Reply-To: f32ee@localhost' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+
+        mail($to, $subject, $message, $headers,'-ff32ee@localhost');
+    }
+
     // redirect user
     redirectTo('/login.php');
 ?>

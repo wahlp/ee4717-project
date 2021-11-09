@@ -30,6 +30,14 @@
 
     if ($result) {
         // appointment successfully created
+        $to      = 'f32ee@localhost';
+        $subject = 'Tan Family Clinic - Booking for ' . $doctor_name;
+        $message = 'Your booking has been set for ' . $appt_timeslot;
+        $headers = 'From: f32ee@localhost' . "\r\n" .
+            'Reply-To: f32ee@localhost' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+
+        mail($to, $subject, $message, $headers,'-ff32ee@localhost');
         // redirect user to view booking
         redirectTo('/view_booking.php');
     } else {
