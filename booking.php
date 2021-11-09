@@ -18,7 +18,7 @@
 
                 <div class="form-section-booking">
                     <label for="doctor">Choose a Doctor</label>
-                    <select name="doctor" id="appt-doctor" onchange="setAppointmentTimes()">
+                    <select name="doctor" id="appt-doctor" onchange="setAppointmentTimes(data)">
                         <?php
                             // read query string to select default doctor name
                             $options = ['Jian Tan', 'Carrie Tan', 'Justin Tan'];
